@@ -1,4 +1,8 @@
+import { Header } from "@/components/header";
+import { Provider } from "@/components/provider";
+import { Box, CssBaseline, Toolbar, Typography } from "@mui/material";
 import type { Metadata } from "next";
+import 'katex/dist/katex.min.css'
 
 export const metadata: Metadata = {
   title: {
@@ -29,16 +33,27 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="ja">
-      <body>
-        {children}
-      </body>
+      <Provider>
+        <body>
+          <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
+
+            <Header />
+
+            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+              <Toolbar />
+              <Typography paragraph component="div">
+                {children}
+              </Typography>
+            </Box>
+          </Box>
+        </body>
+      </Provider>
     </html>
   );
 }

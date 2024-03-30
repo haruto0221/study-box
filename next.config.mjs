@@ -16,7 +16,7 @@ const withMDX = nextMDX({
       [remarkToc, { maxDepth: 3, heading: "目次" }],
       remarkBreaks,
 		],
-    rehypePlugins: [rehypeKatex, rehypePrism, rehypeSlug]
+    rehypePlugins: [rehypeKatex, rehypePrism, rehypeSlug],
   },
 })
 
