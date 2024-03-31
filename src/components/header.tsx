@@ -2,7 +2,7 @@
 
 import { AppBar, Box, Drawer, Divider, Toolbar, Typography, List, Link } from '@mui/material';
 import { MathMap } from './parts/menuList/math';
-import { EnglishMap } from './parts/menuList/english';
+// import { EnglishMap } from './parts/menuList/english';
 import { MenuItem } from "./parts/menuItem";
 import NextLink from 'next/link';
 // import Link from 'next/link';
@@ -45,7 +45,7 @@ export const Header = () => (
           subheader={<li />}
         >
           <MathMap />
-          <EnglishMap />
+          {/* <EnglishMap /> */}
 
           <Divider />
 

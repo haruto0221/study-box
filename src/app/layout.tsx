@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Provider } from "@/components/provider";
 import { Box, CssBaseline, Toolbar, Typography } from "@mui/material";
+import NextTopLoader from 'nextjs-toploader';
 import type { Metadata } from "next";
 import 'katex/dist/katex.min.css'
 
@@ -52,6 +53,8 @@ export default function RootLayout({ children }: Readonly<{
               </Typography>
             </Box>
           </Box>
+
+          <NextTopLoader />
         </body>
       </Provider>
     </html>
